@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar text-center="true" color="blue">
+    <ion-title style="font-size: 80px">
+      <ion-icon style="font-size: 30px" name="md-globe" item-start></ion-icon>
+      World Guide
+    </ion-title>
+  </ion-navbar>
+  <ion-searchbar [(ngModel)]="searchTerm" placeholder="Search for any country" (ionInput)="setFilteredItems()"
+                 (ionChange)="setFilteredItems() "></ion-searchbar>
+
+</ion-header>
+
+<ion-content padding class="background">
+
+  <!--<ion-searchbar [(ngModel)]="searchTerm" placeholder="Type in the name" (ionInput)="setFilteredItems()"
+                 (ionChange)="setFilteredItems() "></ion-searchbar>-->
+
+    <ion-list *ngFor="let p of searchCountries" >
+
+      <ion-item class="backgroundEffect"  (click)="openModal(p)">
+        <ion-avatar class="animate" item-start>
+          <img src={{p.flag}}>
+        </ion-avatar>
+          <ion-label>
+            <h2 class="fade-in animate" >{{p.name}} ({{p.nativeName}})</h2>
+          </ion-label>
+      </ion-item>
+    </ion-list>
+
+</ion-content>
+
+
+

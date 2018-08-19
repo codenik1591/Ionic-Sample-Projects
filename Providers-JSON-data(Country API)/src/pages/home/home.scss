@@ -1,0 +1,71 @@
+page-home {
+  .background{
+    background-image: url("https://i.pinimg.com/736x/fc/87/d5/fc87d59f84d325a5bf7a81233aa98949.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    //https://i.pinimg.com/736x/3f/de/73/3fde7377917d7688a372186bf7fb6254--japanese-landscape-japanese-gardens.jpg
+    //https://i.pinimg.com/736x/56/ef/af/56efafb1b6943fc7eda663ec0f2ca8a8--spiral-galaxy-iphone--wallpaper.jpg
+
+    opacity: 0.8;
+  }
+  .backgroundEffect{
+    opacity: 1;
+    background: linear-gradient(purple, white);
+  }
+
+  .toolbar-title{
+    font-family: "AR BERKLEY";
+    font-weight: bolder;
+    font-size:24px;
+  }
+  .search{
+    position: fixed;
+  }
+  .animate{
+    animation-name: slideIn;
+    animation-duration: 0.75s;
+  }
+  @keyframes slideIn {
+    0% {
+      transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  /*.delay-one{
+    animation-delay: 1s;
+  }*/
+
+  .fade-in{
+    animation-name: fade-in;
+    font-family: "Monotype Corsiva";
+    font-size: 22px;
+    font-weight: bold;
+    color: brown;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateX(80px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  //h2{
+  //  font-family: "Monotype Corsiva";
+  //  font-size: 24px;
+  //}
+
+  h2:hover {
+    font-weight: bold;
+    font-size: 26px;
+    font-family: "Monotype Corsiva";
+  }
+
+}
+
