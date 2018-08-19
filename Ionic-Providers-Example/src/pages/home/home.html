@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Marvel Series
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="background">
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let data of movieService.movies">
+      <ion-item>
+        <ion-card (click)="openModal(data)">
+          <img src={{data.src}}>
+          <ion-card-content>
+            <ion-card-title color="indigo">{{data.title}}</ion-card-title>
+
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>
