@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Nikhil</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Send SMS </h3>
+  <ion-item class="item">
+    <ion-label stacked><b>Phone Number</b></ion-label>
+    <!--<ion-input type="number" [(ngModel)]="phoneNum" placeholder="Phone Number" maxlength="10" hidden></ion-input>-->
+    <ion-input type="tel" [(ngModel)]="phoneNum" placeholder="Phone Number" maxlength="10"></ion-input>
+  </ion-item>
+
+  <ion-item class="item">
+    <ion-label class="my-label" stacked><b>Message</b></ion-label>
+    <ion-textarea id="messageBox" color="primary" [(ngModel)]="msg" placeholder="Type in your message here!" rows="4">
+    </ion-textarea>
+  </ion-item>
+
+  <button ion-button (click)="listenToSpeech()">Listen or Speech</button>
+  <button ion-button (click)="sendSMS()">Send SMS</button>
+
+
+  <ion-list *ngFor="let sentence of listenList">
+
+    <button ion-item color="blue" (click)="setMessage(sentence)">
+      <b>{{sentence}}</b>
+    </button>
+  </ion-list>
+
+</ion-content>
