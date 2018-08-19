@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Assignment 8
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <h4>Text Input</h4>
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed>Username</ion-label>
+      <ion-input placeholder="Type Username" type="text" #name></ion-input>
+    </ion-item>
+
+
+    <button ion-button half round (click)="openModal(name.value)">Submit Name</button>
+
+
+    <!--<p> {{name.value}}</p>-->
+
+  </ion-list>
+
+  <h4>Icons</h4>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-icon name="happy" color="secondary"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <ion-icon name="musical-notes" color="primary"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <ion-icon name="camera" color="dark"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <ion-icon name="cafe" color="orange"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <ion-icon name="sunny" color="yellow"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <ion-icon name="rainy" color="primary"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+  <h4>Card</h4>
+  <ion-card (swipe)="showActionSheet($event)">
+    <img src="./assets/imgs/image.jpg">
+    <ion-card-content>
+      <ion-card-title>Jersey City: MyClick</ion-card-title>
+      <p>Picture from Snow Storm January 2017</p>
+    </ion-card-content>
+  </ion-card>
+
+
+  <h4>Check-Boxes</h4>
+  <ion-list>
+    <ion-list-header>Choose Technical skills</ion-list-header>
+    <ion-item>
+      <ion-label>C</ion-label>
+      <ion-checkbox checked="true"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>C++</ion-label>
+      <ion-checkbox checked="false"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Java</ion-label>
+      <ion-checkbox checked="false"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Python</ion-label>
+      <ion-checkbox checked="false"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+
+  <h4>Radio-Buttons</h4>
+  <ion-list>
+    <ion-item>
+      <ion-label>Primary Tech Skill</ion-label>
+      <ion-select>
+        <ion-option value="c">C</ion-option>
+        <ion-option value="c++">C++</ion-option>
+        <ion-option value="java">Java</ion-option>
+        <ion-option value="python">Python</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+
+
+  <button ion-button full round (click)="loadCanvas()">Click to see my canvas</button>
+
+
+</ion-content>
